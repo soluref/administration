@@ -1,0 +1,18 @@
+<% content_for :title do %>
+	Visualiser son article
+<% end %>
+<p>
+	<h2>
+		<%= @article.intitule %>
+	</h2>
+	<% if (@article.archive) %>
+			<br/>(archivé)<br/><br/>
+	<% end %>
+</p>
+<p><%= @article.donnees.html_safe%></p>
+
+<p>
+
+</p>
+	
+<p><%= link_to 'back', articles_path, class: 'underline'%></p>

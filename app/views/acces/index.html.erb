@@ -1,0 +1,21 @@
+<h1>Liste des Acces</h1>
+
+<% @access.each do|a|%>
+	<p>
+		<%= a.libelle %>
+	</p>
+	<p>
+		<%= a.url %>
+	</p>
+	<div style="float:left;">		
+		<%= button_to "Show", acces_path(a) %>
+	</div>
+	<div style="float:left;">		
+		<%= button_to "Edit", edit_acce_path(a) %>
+	</div>
+	<div style="float:left;">		
+		<%= button_to "delete", acce_path(a), :method=>:delete, :class=>:destroy, data: { confirm: 'Are you sure?' }%>
+	</div>
+	<div style="clear:both;">
+
+<% end %>

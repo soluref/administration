@@ -1,0 +1,36 @@
+<% content_for :title do %>
+	Mon actualité - Édition
+<% end %>
+
+<h1><%= @actualite.libelle %></h1>
+
+<%= form_for(@actualite) do |f|  %>
+<p>
+	<%= hidden_field_tag 'actualite[archive]', nil %>
+	Archivé :
+	<%= check_box_tag 'actualite[archive]', 1, (@actualite.archive == 1 ? true : false), :class=> 'form' %>
+
+</p>
+<p>
+	<%= f.text_field :libelle, :class=> 'form' %>
+</p>
+<p>
+	<%= f.text_field :informations, :class=> 'form' %>
+</p>
+<p>
+	<%= f.text_field :image, :class=> 'form' %>
+</p>
+<p>
+	<%= f.text_area :resume, size: "5x5" %>
+</p>
+<p>
+	<%= f.text_field :pdf, :class=> 'form' %>
+</p>
+<p>
+	<%= f.text_field :url, placeHolder: 'Set a url to link', :class=> 'form' %>
+</p>
+<p>
+	<%= f.submit "Update", :class => "form-btn"%>
+</p>
+<% end %>
+

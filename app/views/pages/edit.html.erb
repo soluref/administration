@@ -1,0 +1,17 @@
+<h1>Page</h1>
+<table cellspacing=0 cellpadding=10>
+
+<%= form_for :pages, url: page_path(@page), method: :patch do |f| %>
+	<tr>
+	<td><%= f.label :libelle %><%= f.text_field :libelle %></td>
+	<td><%= f.label :url %><%= f.text_field :url %></td>
+	<td><%= f.label :couleur %><%= f.text_field :couleur %></td>
+	<td><%= f.submit %></td>	
+	</tr>
+<% end %>
+</table>
+<div style="float:left;">
+	<%= link_to "Back", pages_path, :method=>:get, :class=>:destroy, data: { confirm: 'Are you sure?' }%>
+</div>
+<div style="clear:both;">
+</div>

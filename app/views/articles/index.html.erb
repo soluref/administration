@@ -1,0 +1,13 @@
+<% content_for :title do %>
+	Les articles
+<% end %>
+<p>
+	<br/><br/>
+	<ul>
+	<% @articles.each do|a|%>
+
+		<li><%= link_to	a.intitule, article_path(a) %> - </li>
+	<% end %>
+	</ul>
+</p>
+<%= link_to	"Nouveau", new_article_path, class: 'new' %>

@@ -1,0 +1,372 @@
+/*
+Free Html5 Responsive Templates
+Author: Kimmy
+Version : 2.0
+Author URI: http://www.zerotheme.com/
+*/
+/* -------------------------------------------- */
+/* ------------------Grid System--------------- */ 
+.zerogrid{ width: 95%; position: relative; margin: 0 auto; padding: 0px; margin:auto;}
+.zerogrid:after { content: "\0020"; display: block; height: 0; clear: both; visibility: hidden; }
+
+.zerogrid .row{}
+.zerogrid .row:before,.row:after { content: '\0020'; display: block; overflow: hidden; visibility: hidden; width: 0; height: 0; }
+.zerogrid .row:after{clear: both; }
+.zerogrid .row{zoom: 1;}
+
+.zerogrid .wrap-col{margin:5px;}
+.wrap-col{margin:1px;}
+
+.zerogrid .wrap-col h2{text-align:left}
+.zerogrid .col-1-2, .zerogrid .col-1-3, .zerogrid .col-2-3, .zerogrid .col-10-42, .zerogrid .col-1-4, .zerogrid .col-2-4, .zerogrid .col-3-4, .zerogrid .col-1-5, .zerogrid .col-2-5, .zerogrid .col-3-5, .zerogrid .col-4-5, .zerogrid .col-1-6, .zerogrid .col-2-6, .zerogrid .col-3-6, .zerogrid .col-4-6, .zerogrid .col-5-6{float:left; margin-right:50px;	text-align;justify}
+.zerogrid .col-1-2:hover, .zerogrid .col-1-3:hover, .zerogrid .col-2-3:hover, .zerogrid .col-10-42:hover, .zerogrid .col-1-4:hover, .zerogrid .col-2-4:hover, .zerogrid .col-3-4:hover, .zerogrid .col-1-5:hover, .zerogrid .col-2-5:hover, .zerogrid .col-3-5:hover, .zerogrid .col-4-5:hover, .zerogrid .col-1-6:hover, .zerogrid .col-2-6:hover, .zerogrid .col-3-6:hover, .zerogrid .col-4-6:hover, .zerogrid .col-5-6:hover{
+	cursor:pointer;
+}
+
+.zerogrid .col-full{width:95%;align:center;}
+
+.zerogrid .col-1-2{width:45%;}
+
+.zerogrid .col-1-3{width:35.33%;}
+.zerogrid .col-2-3{width:66.66%;}
+
+.zerogrid .col-1-4{width:25%;display:inline-block;}
+.zerogrid .col-10-42{width:23%;}
+.zerogrid .col-2-4{width:50%;}
+.zerogrid .col-3-4{width:75%;}
+
+.zerogrid .col-1-5{width:20%;}
+.zerogrid .col-2-5{width:40%;}
+.zerogrid .col-3-5{width:60%;}
+.zerogrid .col-4-5{width:80%;}
+
+.zerogrid .col-1-6{width:16.66%;}
+.zerogrid .col-2-6{width:33.33%;}
+.zerogrid .col-3-6{width:50%;}
+.zerogrid .col-4-6{width:66.66%;}
+.zerogrid .col-5-6{width:83.33%;}
+
+.col-10-42 img{
+	width:100%;
+}
+
+
+.presentation{
+	background: linear-gradient( to top, white, #E2E2E3);
+	background: -webkit-linear-gradient(bottom, white , rgba(226,226,227, 0.8));
+	top:10%;
+}
+
+
+.margeBox{
+	margin-right:1px;
+	margin-bottom:20px;
+	
+ 	padding-left:15px;
+	padding-right:15px;
+	padding-bottom:10px;
+	
+	line-height:1.5em;
+}
+.margeBoxBis{
+	margin-top:1%;
+	margin-right:1px;
+	margin-bottom:20px;
+	
+	padding-top:10px;
+ 	padding-left:10px;
+	padding-right:10px;
+	
+	line-height:1.5em;
+}
+
+
+.margeBox1{
+	margin-top:1%;
+	margin-right:250px;
+	margin-bottom:20px;
+	
+	padding-top:10px;
+	padding-left:10px;
+	padding-right:10px;
+	padding-bottom:10px;
+	
+	line-height:1.5em;
+}
+.margeBox2{
+	margin-top:1%;
+	margin-right:10px;
+	margin-bottom:20px;
+	
+	padding-top:10px;
+	padding-left:10px;
+	padding-right:10px;
+	padding-bottom:10px;
+	
+	line-height:1.5em;
+}
+
+
+.margeBox img{
+	padding-right:10px;
+	padding-bottom:10px;
+}
+.margeBox h3{
+	margin-top:0px;
+	line-height:1.000em
+}
+
+.boxBottom{
+	-webkit-animation:bottomTrans 1s 0s ease both; 
+}
+
+
+@-webkit-keyframes bottomTrans {
+100%{ -webkit-transform:translateY(210%)}
+}
+
+
+@media only screen and (min-width: 1281px) and (max-width: 2560px) {
+	.zerogrid .col-1-3, .zerogrid .col-1-5 , .zerogrid .col-3-4{
+		width:16%;
+	}
+
+	.zerogrid  .col-2-5{
+		width:25%;
+	}
+	.offreMobile .col-2-5{
+		margin-top:1%;
+	}
+	.margeBox1{
+		margin-right:0px;
+	}
+	#accueil .col-1-4, #financement div{
+		width:25%;
+	}
+
+}
+
+@media only screen and (min-width: 1025px) and (max-width: 1280px) {
+	.zerogrid .col-1-3, .zerogrid .col-1-5 , .zerogrid .col-3-4{
+		width:16%;
+	}
+
+	.zerogrid  .col-2-5{
+		width:25%;
+	}
+	.offreMobile .col-2-5{
+		margin-top:1%;
+	}
+	.margeBox1{
+		margin-right:0px;
+	}
+	#accueil .col-1-4, #financement div{
+		width:25%;
+	}
+
+}
+
+@media only screen and (max-width: 1080px) {
+	#offreFixe .col-1-3{
+		width:40%;
+	}
+	#offreInformatique .col-1-5{
+		width:40%;
+	}
+}
+
+@media only screen and (min-width: 960px) and (max-width: 1024px) {
+	.zerogrid .col-1-3, .zerogrid .col-1-5 , .zerogrid .col-3-4{
+		width:16%;
+	}
+
+	.zerogrid  .col-2-5{
+		width:25%;
+	}
+	.offreMobile .col-2-5{
+		margin-top:1%;
+	}
+	.margeBox1{
+		margin-right:0px;
+	}
+	#accueil .col-1-4, #financement div{
+		width:25%;
+	}
+
+}
+@media only screen and (max-width: 810px) {
+
+	#offreFixe .col-1-3{
+		width:30%;
+		max-height:100%;
+	}
+
+	.zerogrid .col-1-5 {
+		width:40%;
+		height:30%;
+	}
+	.zerogrid .col-3-4{
+		width:80%;
+
+	}
+
+	.zerogrid  .col-2-5{
+		width:80%;
+	}
+	.offreMobile .col-2-5{
+		margin-top:1%;
+	}
+	.margeBox1{
+		margin-right:0px;
+	}
+	#accueil .col-1-4, #financement div{
+		width:25%;
+	}
+	.zerogrid .col-2-3{
+		font-size: 1.5em;
+	}
+
+}
+
+
+
+/* @media only screen and (min-width: 768px) and (max-width: 959px) {
+	.zerogrid .col-1-3, .zerogrid .col-2-3, .zerogrid .col-1-5 , .zerogrid .col-3-4{
+		width:80%;
+	}
+	.zerogrid .col-1-3, .zerogrid .col-2-3, .zerogrid .col-1-5  span{
+		font-size: 2.5em;
+	}
+	#accueil .col-1-4, #financement div{
+		width:80%;
+	}
+
+} */
+
+
+
+@media only screen and (min-width: 620px) and (max-width: 768px) {
+	.zerogrid{width:100%;}
+	.boxLeftAbsolute{
+		left:0%;
+	}
+	.fixe {
+		font-size:1em;
+	}
+	.fixe h3{
+		font-size:1.2em;
+	}
+	
+	.margeBox2{
+		margin-top:1%;
+		margin-right:250px;
+		margin-bottom:10px;
+		
+		padding-top:1px;
+		padding-left:10px;
+		padding-right:10px;
+		padding-bottom:0px;
+		
+		line-height:1.2em;
+	}
+	.iphone{
+		background:url(../images/iphone6s-767.png) no-repeat 10%;
+		height:50%;
+		
+	}		
+	
+}
+
+
+
+@media only screen and (min-width: 481px) and (max-width: 619px) {
+	.zerogrid{width:100%;}
+	.zerogrid .col-1-3, .zerogrid .col-2-3{width:80%;}
+	.zerogrid .col-2-5  {width:30%;}
+	
+	.zerogrid .col-1-5{
+		width:80%;
+	}
+	
+	#accueil .col-1-4{
+		width:80%;
+	}
+
+	.fixe {
+		font-size:0.7em;
+	}
+	.fixe h3{
+		font-size:1.2em;
+	}
+	
+	.margeBox2{
+		margin-top:1%;
+		margin-right:250px;
+		margin-bottom:10px;
+		
+		padding-top:1px;
+		padding-left:10px;
+		padding-right:10px;
+		padding-bottom:0px;
+		
+		line-height:1.2em;
+	}	
+	.mobile .margeBox1{
+		margin-left:0%;
+	}
+	.margeBox1{
+		margin-top:5px;
+		margin-right:0px;
+		margin-bottom:0px;
+		
+		padding-top:0px;
+		padding-left:-10px;
+		padding-right:0px;
+		padding-bottom:0px;
+		
+		line-height:1.5em;
+
+	}	
+	
+}
+
+
+@media only screen and (min-width: 375px) and (max-width: 479px) {
+	.zerogrid, .zerogrid .col-1-2, .zerogrid .col-1-3, .zerogrid .col-2-3, .zerogrid .col-1-4, .zerogrid .col-10-42, .zerogrid .col-2-4, .zerogrid .col-3-4, .zerogrid .col-1-5, .zerogrid .col-2-5, .zerogrid .col-3-5, .zerogrid .col-4-5, .zerogrid .col-1-6, .zerogrid .col-2-6, .zerogrid .col-3-6, .zerogrid .col-4-6, .zerogrid .col-5-6{width:90%;}
+	.zerogrid .wrap-col{margin:0px;}
+	.margeBox{
+		margin-left:0px;
+		margin-right:0px;
+		margin-bottom:5px;
+		
+		padding-top:10px;
+		padding-left:10px;
+		padding-right:10px;
+		padding-bottom:0px;
+		font-size:0.7em;
+	}
+	
+	.fondu img{
+		zoom:0.5;
+	}
+	.col-1-5{
+		width:80%;
+	}	
+}
+
+@media only screen and (max-width: 375px) {
+	.zerogrid{width:100%;}
+	.boxLeftAbsolute{
+		left:0%;
+	}
+	.margeBox{
+		margin-left:0px;
+	}
+	.zerogrid{
+		width:80%;
+	}
+	.col-1-5{
+		width:80%;
+	}
+	
+}

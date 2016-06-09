@@ -1,0 +1,22 @@
+<% content_for :title do %>
+	Les actualités
+<% end %>
+
+
+
+
+<div class="main">
+  <div class="container">
+  <h2>Les actualités</h2>
+	<% @actualites.each do|a|%>    
+	<div class="actualite">
+      <%= image_tag a.image %>
+      <%= link_to a.libelle,  edit_actualite_path(a) %><br/>
+      <%= link_to "Learn more",  a.url, :target => "_blank" %>
+	  
+    </div>
+    <% end %>
+  </div>
+</div>
+
+

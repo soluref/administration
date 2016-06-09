@@ -1,0 +1,36 @@
+<% content_for :title do %>
+	Créer son article
+<% end %>
+
+<h1>Actualité</h1>
+
+<div class="login"> 
+	<table>
+
+
+	<%= form_for :article, url: articles_path  do |f| %>
+		<p>
+			<%= f.label :intitule %><br/><%= f.text_field :intitule, :placeHolder => "Saisir un intitulé" %>
+		</p>
+		<p>
+			<br/>
+			<%= f.label :Page %><br/><%= select("article", "page_id", Page.all.collect {|p| [ p.libelle, p.id ] }, { include_blank: true }) %>
+		</p>
+		<p>
+			<br/>
+			<%= f.label :donnees %><%= f.text_field :donnees, :placeHolder => "Saisir les informations (champ libre)" %>
+		</p>
+		<p>
+			<br/>
+			<%= hidden_field_tag 'articles[archive]', '' %>
+			<%= f.label :Archivé %>
+			<%= check_box_tag :archive , 1, (@article.archive == 1 ? true : false) %></td>
+		</p>
+		
+		<p>
+			<%= f.submit "Créer" %>
+		</td>	
+		
+	<% end %>
+	</table>
+</div>

@@ -1,0 +1,13 @@
+<h1>Identifiez-vous</h1>
+
+<div class="login">
+	<div class="container center"> 
+		<%= form_for(:session, url: login_path) do |f| %> 
+			<%= f.email_field :email, :placeholder => "  Email" %> 
+			<%= f.password_field :password, :placeholder => "  Password" %> 
+			<%= f.submit "Log in", class: "btn-submit" %>
+		<% end %>
+		<%= button_to 'Inscription', signup_path %> 
+	</div>
+</div>
+  

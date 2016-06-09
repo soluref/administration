@@ -1,0 +1,11 @@
+<h1>Liste des acces</h1>
+<table cellspacing=0 cellpadding=10>
+
+<%= form_for :acces, url: acce_path(@acces), method: :patch do |f| %>
+	<tr>
+	<td><%= f.text_field :libelle %></td>
+	<td><%= f.text_field :url %></td>
+	<td><%= f.submit %></td>
+	</tr>
+<% end %>
+</table>
