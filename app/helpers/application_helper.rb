@@ -17,6 +17,10 @@ module ApplicationHelper
 			"La chaine n'est pas vide."
 		end
 	end  
+	
+	def logo
+		"sln-transparent.png"
+	end
 end
 
 # les égalités

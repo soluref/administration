@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
   
 	def new
-		@titre="Nouvel Utilisateur"
+		@titrePage="Nouvel Utilisateur"
 		@user=User.new
 	end
   
