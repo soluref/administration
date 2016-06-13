@@ -29,4 +29,5 @@ class ApplicationController < ActionController::Base
 		@_request.reset_session
 	end
 
+
 end

@@ -11,7 +11,7 @@ class User < ActiveRecord::Base
 	end
 
 	validates :nom, presence: true,
-                    length: { minimum: 5 }
+                    length: { minimum: 5, maximum: 10 }
 					
 
 end

@@ -4,6 +4,7 @@ class PagesController < ApplicationController
 	before_action :require_admin, only: [:destroy]
 	
   def index
+	@titrePage=""
 	@pages=Page.all
   end
 
@@ -40,6 +41,9 @@ class PagesController < ApplicationController
   def destroy
 	Page.destroy(params[:id])
 	redirect_to pages_path
+  end
+  
+  def about
   end
   
   private

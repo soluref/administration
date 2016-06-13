@@ -1,0 +1,21 @@
+	<header>
+		<nav class="navigate">
+			<%= link_to 'Acces', acces_path %>&nbsp;
+			<%= link_to 'Actualités', actualites_path %>&nbsp;
+			<%= link_to 'Pages', pages_path %>
+			<%= link_to 'Articles', articles_path %>
+
+			<% if current_user %>
+				<ul>
+					<li><%= current_user.email %></li>
+					<li><%= link_to "Log out", logout_path, method: "delete" %></li>
+				</ul>
+			<% else %>
+				<ul>
+					<li><%= link_to "Log in", login_path %></li>
+					<li><%= link_to "Signup", signup_path %></li>
+				</ul>
+			<% end %>
+
+		</nav>
+	</header>

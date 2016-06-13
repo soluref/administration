@@ -1,6 +1,7 @@
 class UsersController < ApplicationController
   
 	def new
+		@titre="Nouvel Utilisateur"
 		@user=User.new
 	end
   

@@ -17,6 +17,13 @@ body{
 	text-align:justify;
 }
 
+nav {
+	position:absolute;
+	width:100%;
+	top:3%;
+	z-index:9;
+}
+
 .navigate{
 background-color:black;
 line-height:3em;
@@ -43,6 +50,20 @@ text-transform:uppercase;
   height: 300px;
   width: 100%;
 }
+footer {
+  position:absolute;
+  bottom:10px;
+  text-align: center;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  background-color:black;
+}
+
+footer nav {
+  float: none;
+  background-color:black;
+}
 
 .container {
   width: 100%;
@@ -63,13 +84,15 @@ text-transform:uppercase;
 
 
 .logo {
-  background: url("/img/logo.png") no-repeat;
-  height: 200px;
   margin: 0 auto;
   position: absolute;
-  top: 100px;
-  width: 420px;
-  left:45%;
+  top:3%;
+  left:3%;
+  z-index:10;
+  -moz-transform:scale(0.5);
+  transform::scale(0.5);
+  transform-origin:top left;
+  
 }
 
 img{
@@ -83,7 +106,7 @@ img{
 }
 
 .navigate ul  {
-	position:absolute;
+	position:fixe;
 	top:0%;
 	right:5%;
 }
