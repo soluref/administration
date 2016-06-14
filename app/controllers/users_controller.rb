@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  
+   
 	def new
 		@titrePage="Nouvel Utilisateur"
 		@user=User.new
@@ -10,6 +10,7 @@ class UsersController < ApplicationController
 		
 		if @user.save
 			session[:user_id]=@user.id
+			logger.warn "New user: #{@user.nom}"			
 			redirect_to '/'
 		else
 			redirect_to '/signup'
