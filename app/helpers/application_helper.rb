@@ -6,7 +6,7 @@ module ApplicationHelper
 		if @titrePage.nil? || @titrePage.empty?
 			base_titre
 		else
-		  "#{@titrePage} de l'application"
+		  "#{@titrePage}"
 		end
 	end
   

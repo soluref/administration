@@ -3,6 +3,7 @@ class UsersController < ApplicationController
 	def new
 		@titrePage="Nouvel Utilisateur"
 		@user=User.new
+		
 	end
   
 	def create
@@ -13,7 +14,7 @@ class UsersController < ApplicationController
 			logger.warn "New user: #{@user.nom}"			
 			redirect_to '/'
 		else
-			redirect_to '/signup'
+			redirect_to '/'
 		end
 		
 	end
@@ -56,6 +57,6 @@ class UsersController < ApplicationController
 	private
 	  # user_params : pour la récupération des paramètres du formulaire 
 	  def user_params
-		params.require(:user).permit(:nom, :email, :password)
+		params.require(:user).permit(:nom, :email, :email_confirmation, :password)
 	  end
 end

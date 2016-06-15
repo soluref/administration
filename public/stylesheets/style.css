@@ -16,6 +16,12 @@ body{
 	padding-right:2.5%;
 	text-align:justify;
 }
+.corpus h1{
+	text-align:center;
+	width:100%;
+	padding-left:0px;
+}
+
 
 nav {
 	position:absolute;

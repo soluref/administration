@@ -1,8 +1,15 @@
-<h1>Identifiez-vous</h1>
+	<br/><br/><br/><br/><br/>
+<h1><%= titrePage %></h1>
 
 <div class="login">
 	<div class="container center"> 
-		<%= form_for(:session, url: login_path) do |f| %> 
+		<!-- Le helper form_for prend en paramètre
+			- soit une variable de classe défini dans la méthode "new" du contrôleur
+			- soit le nom d'une ressource comme ci-dessous avec :nom_de_la_ressource_définie dans le routes.rb
+			
+			- une url définie dans le routes.rb et consultable grâce à la commande rake routes
+		-->
+		<%= form_for(:session, url: sessions_path) do |f| %> 
 			<%= f.email_field :email, :placeholder => "  Email" %> 
 			<%= f.password_field :password, :placeholder => "  Password" %> 
 			<%= f.submit "Log in", class: "btn-submit" %>
