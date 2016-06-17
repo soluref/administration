@@ -2,46 +2,24 @@
 <html>
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-  <title><%= yield :title %></title>
-	<%= stylesheet_link_tag "style_actualites" %>
-	<%= stylesheet_link_tag "style_blog" %>
-	<%= stylesheet_link_tag "zerogrid" %>
+  <title>Commune</title>
 	
+	<%= render "layouts/stylesheets" %>
 	<%= javascript_include_tag 'data-turbolinks-track' => true %>
-
+	
 	<%= csrf_meta_tags %>
 </head>
 
-<body>
+<body>	
 
 <div>
-
-	<div class="navigate">
-		<%= link_to 'Acces', acces_path %>&nbsp;
-		<%= link_to 'Actualités', actualites_path %>&nbsp;
-		<%= link_to 'Pages', pages_path %>
-		<%= link_to 'Articles', articles_path %>
-
-        <% if current_user %>
-			<ul>
-				<li><%= current_user.email %></li>
-			</ul>
-        <% else %>
-			<ul>
-				<li><%= link_to "Log in", login_path %></li>
-				<li><%= link_to "Signup", signup_path %></li>
-			</ul>
-        <% end %>
-
-	</div>
-	<div class="corpus">
+	<%= render "layouts/header" %>
+	<section class="corpus">
 		<%= yield %>
-	</div>
+	</section>
+	<%= render "layouts/footer" %>
 </div>
-
-
-
-
+</body>
 
 
 </html>

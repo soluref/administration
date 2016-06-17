@@ -2,41 +2,25 @@
 <html>
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-  <title><%= yield :title %></title>
-	<%= render "layouts/stylesheets" %>
-	<%= stylesheet_link_tag "style_page" %>
+  <title>Commune</title>
 	
+	<%= render "layouts/stylesheets" %>
+	<%= javascript_include_tag 'application' %>	
+	<%= javascript_include_tag 'jquery', 'jqueryApp' %>
 	<%= csrf_meta_tags %>
+
 </head>
 
-<body>
+<body>	
 
+<div>
 	<%= render "layouts/header" %>
-	<div>
-
-		<% if current_user %>
-			<ul>
-				<li><%= current_user.email %></li>
-			</ul>
-		<% else %>
-			<ul>
-				<li><%= link_to "Log in", login_path %></li>
-				<li><%= link_to "Signup", signup_path %></li>
-			</ul>
-		<% end %>
-
-	</div>
 	<section class="corpus">
 		<%= yield %>
 	</section>
-
-	</div>
-	<%= render "layouts/footer" %>	
+	<%= render "layouts/footer" %>
+</div>
 </body>
-
-</html>
-
-
 
 
 </html>
