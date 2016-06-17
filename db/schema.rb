@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160601094116) do
+ActiveRecord::Schema.define(version: 20160615152659) do
 
   create_table "acces", force: :cascade do |t|
     t.string "libelle", limit: 80, null: false
@@ -28,8 +28,6 @@ ActiveRecord::Schema.define(version: 20160601094116) do
     t.string  "url",          limit: 255, null: false
   end
 
-  add_index "actualites", ["id"], name: "sqlite_autoindex_actualites_1", unique: true
-
   create_table "alertes", force: :cascade do |t|
     t.string  "libelle",     limit: 25, null: false
     t.text    "explication",            null: false
@@ -44,14 +42,11 @@ ActiveRecord::Schema.define(version: 20160601094116) do
   create_table "articles", force: :cascade do |t|
     t.string   "intitule",   limit: 50, null: false
     t.text     "donnees",               null: false
-    t.integer  "archive",    limit: 1,  null: false
-    t.text     "slider",                null: false
+    t.integer  "archive",    limit: 1
     t.datetime "created_at",            null: false
     t.datetime "updated_at",            null: false
     t.integer  "page_id"
   end
-
-  add_index "articles", ["page_id"], name: "index_articles_on_page_id"
 
   create_table "comptes", primary_key: "user", force: :cascade do |t|
     t.string  "password",   limit: 256, null: false
@@ -99,6 +94,17 @@ ActiveRecord::Schema.define(version: 20160601094116) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "relationships", force: :cascade do |t|
+    t.integer  "follower_id"
+    t.integer  "followed_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "relationships", ["followed_id"], name: "index_relationships_on_followed_id"
+  add_index "relationships", ["follower_id", "followed_id"], name: "index_relationships_on_follower_id_and_followed_id", unique: true
+  add_index "relationships", ["follower_id"], name: "index_relationships_on_follower_id"
+
   create_table "services", primary_key: "service", force: :cascade do |t|
     t.integer "article",  limit: 1,  null: false
     t.string  "intitule", limit: 50, null: false
@@ -128,5 +134,7 @@ ActiveRecord::Schema.define(version: 20160601094116) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  add_index "users", ["email"], name: "index_users_on_email", unique: true
 
 end

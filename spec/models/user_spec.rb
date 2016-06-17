@@ -55,5 +55,21 @@ describe User do
   end
   
 
+  describe "relationships" do
+
+    before(:each) do
+      @user = User.create!(@attr)
+      @followed = Factory(:user)
+    end
+
+    it "devrait posséder une méthode `relationships`" do
+      @user.should respond_to(:relationships)
+    end
+
+    it "devrait posséder une méthode `following" do
+      @user.should respond_to(:following)
+    end
+  end  
+
   
 end
